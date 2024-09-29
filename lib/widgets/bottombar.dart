@@ -142,16 +142,16 @@ class _BottomBarViewState extends State<BottomBarView>
                         gradient: LinearGradient(
                           colors: [
                             _isHighlighted
-                                ? Colors.grey.withOpacity(0.5)
-                                : AppTheme.primaryColor,
-                            AppTheme.secondaryColor,
+                                ? AppTheme.lightBlack
+                                : AppTheme.lighterBlack,
+                            _isHighlighted ? AppTheme.black : AppTheme.black,
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                              color: AppTheme.primaryColor.withOpacity(0.4),
+                              color: AppTheme.black.withOpacity(0.4),
                               offset: const Offset(8.0, 16.0),
                               blurRadius: 16.0),
                         ],
@@ -256,7 +256,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                   child: Icon(
                     widget.tabIconData!.iconData, // 使用 iconData
                     color: widget.tabIconData!.isSelected
-                        ? AppTheme.primaryColor
+                        ? AppTheme.black
                         : Colors.grey, // 根据选中状态改变颜色
                     size: 32, // 设置图标大小
                   ),
@@ -276,7 +276,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 8,
                       height: 8,
                       decoration: const BoxDecoration(
-                        color: AppTheme.primaryColor,
+                        color: AppTheme.black,
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -297,7 +297,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 4,
                       height: 4,
                       decoration: const BoxDecoration(
-                        color: AppTheme.primaryColor,
+                        color: AppTheme.black,
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -318,7 +318,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 6,
                       height: 6,
                       decoration: const BoxDecoration(
-                        color: AppTheme.primaryColor,
+                        color: AppTheme.black,
                         shape: BoxShape.circle,
                       ),
                     ),

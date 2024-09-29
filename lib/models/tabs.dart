@@ -16,7 +16,7 @@ class TabIconData {
 
   static List<TabIconData> tabIconsList = <TabIconData>[
     TabIconData(
-      iconData: Icons.home,
+      iconData: Icons.library_books_rounded,
       index: 0,
       isSelected: true,
       animationController: null,
@@ -28,13 +28,13 @@ class TabIconData {
       animationController: null,
     ),
     TabIconData(
-      iconData: Icons.analytics,
+      iconData: Icons.account_balance_wallet_rounded,
       index: 2,
       isSelected: false,
       animationController: null,
     ),
     TabIconData(
-      iconData: Icons.settings,
+      iconData: Icons.face_6_sharp,
       index: 3,
       isSelected: false,
       animationController: null,

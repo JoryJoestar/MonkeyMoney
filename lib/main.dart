@@ -3,12 +3,12 @@ import 'package:monkey_money/models/tabs.dart';
 import 'package:monkey_money/widgets/bottombar.dart';
 import 'theme.dart';
 
-import 'package:monkey_money/views/home/home.dart';
-import 'package:monkey_money/views/analytics/analytics.dart';
-import 'package:monkey_money/views/insights/insights.dart';
-import 'package:monkey_money/views/settings/settings.dart';
-
 import 'package:monkey_money/views/record/record.dart';
+import 'package:monkey_money/views/assets/assets.dart';
+import 'package:monkey_money/views/insights/insights.dart';
+import 'package:monkey_money/views/account/account.dart';
+
+import 'package:monkey_money/views/add_record/add_record.dart';
 
 void main() => runApp(const MyApp());
 
@@ -48,7 +48,7 @@ class _MyHomeViewState extends State<MyHomeView> with TickerProviderStateMixin {
 
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
-    tabBody = HomeView(animationController: animationController);
+    tabBody = RecordView(animationController: animationController);
     super.initState();
   }
 
@@ -103,7 +103,7 @@ class _MyHomeViewState extends State<MyHomeView> with TickerProviderStateMixin {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      RecordView(animationController: animationController),
+                      AddRecordView(animationController: animationController),
                 ),
               );
             },
@@ -115,7 +115,7 @@ class _MyHomeViewState extends State<MyHomeView> with TickerProviderStateMixin {
                   }
                   setState(() {
                     tabBody =
-                        HomeView(animationController: animationController);
+                        RecordView(animationController: animationController);
                   });
                 });
               } else if (index == 1) {
@@ -145,7 +145,7 @@ class _MyHomeViewState extends State<MyHomeView> with TickerProviderStateMixin {
                   }
                   setState(() {
                     tabBody =
-                        SettingsView(animationController: animationController);
+                        AccountView(animationController: animationController);
                   });
                 });
               }

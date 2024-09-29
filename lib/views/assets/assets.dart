@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:monkey_money/theme.dart';
 
-class InsightsView extends StatefulWidget {
-  const InsightsView({super.key, this.animationController});
+class AnalyticsView extends StatefulWidget {
+  const AnalyticsView({super.key, this.animationController});
 
   final AnimationController? animationController;
 
   @override
-  InsightsViewState createState() => InsightsViewState();
+  AnalyticsViewState createState() => AnalyticsViewState();
 }
 
-class InsightsViewState extends State<InsightsView>
+class AnalyticsViewState extends State<AnalyticsView>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,11 @@ class InsightsViewState extends State<InsightsView>
           text: const TextSpan(
             children: [
               TextSpan(
-                text: 'IN',
+                text: 'A',
                 style: AppTheme.appBarFirstText,
               ),
               TextSpan(
-                text: 'sights',
+                text: 'ssets',
                 style: AppTheme.appBarLastText,
               ),
             ],
