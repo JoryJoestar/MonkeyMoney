@@ -17,26 +17,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomeView(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, // 关闭右上角的 debug 标签
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppTheme.background, // 设置全局背景颜色
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppTheme.lightBackground, // 设置 AppBar 的背景颜色
+        ),
+      ),
+      home: const MainView(),
     );
   }
 }
 
-class MyHomeView extends StatefulWidget {
-  const MyHomeView({super.key});
+class MainView extends StatefulWidget {
+  const MainView({super.key});
 
   @override
-  State<MyHomeView> createState() => _MyHomeViewState();
+  State<MainView> createState() => _MainViewState();
 }
 
-class _MyHomeViewState extends State<MyHomeView> with TickerProviderStateMixin {
+class _MainViewState extends State<MainView> with TickerProviderStateMixin {
   AnimationController? animationController;
 
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   Widget tabBody = Container(
-    color: AppTheme.background,
+    color: AppTheme.black,
   );
 
   @override

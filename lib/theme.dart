@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   AppTheme._();
-  static const Color background = Color(0xFFF9F9F9);
+  static const Color background = Color.fromARGB(255, 255, 255, 255);
+  static const Color lightBackground = Color.fromARGB(250, 250, 250, 250);
 
   static const Color white = Color(0xFFFFFFFF);
   static const Color nearlyWhite = Color(0xFFFAFAFA);
@@ -18,7 +19,7 @@ class AppTheme {
   static const Color darkerText = Color.fromARGB(255, 41, 41, 41);
   static const Color lightText = Color.fromARGB(255, 116, 116, 116);
   static const Color spacer = Color(0xFFF2F2F2);
-  static const String fontName = 'Roboto';
+  static const String fontName = 'Roboto Mono';
 
   static const TextStyle appBarFirstText = TextStyle(
     fontFamily: fontName,

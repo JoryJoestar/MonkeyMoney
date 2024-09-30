@@ -20,11 +20,11 @@ class InsightsViewState extends State<InsightsView>
           text: const TextSpan(
             children: [
               TextSpan(
-                text: 'IN',
+                text: 'I',
                 style: AppTheme.appBarFirstText,
               ),
               TextSpan(
-                text: 'sights',
+                text: 'nsights',
                 style: AppTheme.appBarLastText,
               ),
             ],
